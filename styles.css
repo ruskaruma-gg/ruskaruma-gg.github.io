@@ -10,6 +10,12 @@ body {
     justify-content: center;
     align-items: center;
 }
+.container {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 100vh;            /* Full height of the viewport */
+}
 .main-container {
     display: flex;
     flex-grow: 1;
