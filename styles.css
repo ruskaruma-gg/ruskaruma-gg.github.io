@@ -10,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .main-container {
     display: flex;
     flex-grow: 1;
@@ -18,6 +19,8 @@ body {
     justify-content: flex-start;
     width: 80%;
 }
+
+/* Sidebar Styling */
 .sidebar {
     width: 300px;
     padding: 20px;
@@ -27,6 +30,7 @@ body {
     align-items: center;
     background-color: #1a1a1a;
 }
+
 .sidebar img {
     width: 200px;
     height: 200px;
@@ -35,6 +39,7 @@ body {
     margin-bottom: 30px;
     border: 3px solid #FFCC00;
 }
+
 .sidebar a {
     display: block;
     color: white;
@@ -47,10 +52,13 @@ body {
     text-align: center;
     font-weight: bold;
 }
+
 .sidebar a:hover {
     background-color: #FFCC00;
     color: black;
 }
+
+/* Content Styling */
 .content {
     flex-grow: 1;
     padding: 40px;
@@ -61,20 +69,25 @@ body {
     background-color: #1a1a1a;
     text-align: left;
 }
+
 .content h1 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
+
 .content p {
     font-size: 1.3rem;
     line-height: 1.6;
     color: white;
 }
+
 .highlight {
     color: #FFCC00;
     font-weight: bold;
 }
+
+/* Footer */
 .copyright {
     width: 100%;
     text-align: center;
@@ -83,4 +96,51 @@ body {
     color: white;
     font-size: 0.9rem;
     margin-top: 20px;
+}
+
+/* 🔹 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    /* Stack Sidebar & Content */
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Make Sidebar Horizontal */
+    .sidebar {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .sidebar img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    /* Arrange Links Horizontally */
+    .sidebar a {
+        display: inline-block;
+        margin: 5px;
+        padding: 8px;
+        width: auto;
+    }
+
+    /* Adjust Content */
+    .content {
+        padding: 20px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1.1rem;
+    }
 }
